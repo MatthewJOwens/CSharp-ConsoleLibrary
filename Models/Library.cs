@@ -19,7 +19,7 @@ namespace console_library
       Console.WriteLine("Select a book number to check out. Or (Q)uit or (R)eturn a book.");
       string selection = Console.ReadLine();
       int index;
-      if (int.TryParse(selection, out index) && Books[index] != null && Books[index].Available == true)
+      if (int.TryParse(selection, out index) != false && Books[index] != null && Books[index].Available == true)
       {
         BorrowBook(index);
       }
